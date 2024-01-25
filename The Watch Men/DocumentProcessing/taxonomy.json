@@ -288,13 +288,77 @@
           "DataSource": null
         }
       ]
+    },
+    {
+      "Connections": [],
+      "DocumentTypeId": "TheWatchMen.Inventory.Inventory",
+      "Group": "The Watch Men",
+      "Category": "Inventory",
+      "Name": "Inventory",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "TheWatchMen.Inventory.Inventory.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "TheWatchMen.Inventory.Inventory.Model",
+          "FieldName": "Model",
+          "IsMultiValue": false,
+          "Type": "Table",
+          "DeriveFieldsFormat": "",
+          "Components": [
+            {
+              "FieldId": "TheWatchMen.Inventory.Inventory.Model.ModelName",
+              "FieldName": "Model Name",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null,
+              "DefaultValue": "",
+              "DataSource": null
+            },
+            {
+              "FieldId": "TheWatchMen.Inventory.Inventory.Model.ModelPrice",
+              "FieldName": "Model Price",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null,
+              "DefaultValue": "",
+              "DataSource": null
+            }
+          ],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        }
+      ]
     }
   ],
   "Groups": [
     {
       "Name": "The Watch Men",
       "Categories": [
-        "Invoices"
+        "Invoices",
+        "Inventory"
       ]
     }
   ],
