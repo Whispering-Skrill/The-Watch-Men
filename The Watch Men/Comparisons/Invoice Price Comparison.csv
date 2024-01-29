@@ -1,8 +1,8 @@
-﻿Invoice Number,Model,Invoice Price,Market Price,Difference
-456466.00,Patek Philippe Nautilus 5712/1A-001,100000.00,116403,-16403
-456466.00,Rolex Daytona 116509 Blue Dial,120000.00,49622,70378
-2001321.00,Patek Philippe Nautilus 5712/1A-001,110000.00,116403,-6403
-135.00,Grand Seiko Elegance Collection SBGM221G,3500.00,4685,-1185
-135.00,Patek Philippe Nautilus 5711/1A-010,92000.00,124282,-32282
-241.00,Patek Philippe Grand Complications 5204/1R-001,200000.00,210991,-10991
-284.00,Rolex Daytona 116506-0002,115000.00,154288,-39288
+﻿Invoice Number,Model (Invoice),Model (Chrono24),Price (Invoice),Price (Chrono24),Difference
+456466.00,Patek Philippe Nautilus 57121A-001,Patek Philippe Nautilus 5712/1A-001,100000.00,117039,17039
+456466.00,Rolex Daytona 116509 Blue Dial,Rolex Daytona 116509 Blue Dial,120000.00,49518,-70482
+2001321.00,Patek Philippe Nautilus 5712/1A-001,Patek Philippe Nautilus 5712/1A-001,110000.00,117039,7039
+135.00,Grand Seiko Elegance Collection SBGM221G,Grand Seiko Elegance Collection SBGM221G,3500.00,4582,1082
+135.00,Patek Philippe Nautilus 5711/1A-010,Patek Philippe Nautilus 5711/1A-010,92000.00,122248,30248
+241.00,Patek Philippe Grand Complications 5204/1R-001,Patek Philippe Grand Complications 5204/1R-001,200000.00,211063,11063
+284.00,Rolex Daytona 116506-0002,Rolex Daytona 116506-0002,115000.00,134620,19620

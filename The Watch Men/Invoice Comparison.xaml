@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2449,2341</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2546,2892</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Invoice_Comparison_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -98,7 +98,7 @@
       <AssemblyReference>UiPathTeam.Excel.Extensions.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Invoice_Comparison" sap:VirtualizedContainerService.HintSize="678,2276" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This sequence will compare invoices with market data for all Models extracted from past invoices." DisplayName="Invoice_Comparison" sap:VirtualizedContainerService.HintSize="678,2827" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Closest_Model" />
       <Variable x:TypeArguments="x:String" Name="Market_Price" />
@@ -108,16 +108,17 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable DataTable="[InvoiceComparison_DataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="636,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Number&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Model&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Market_x0020_Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Difference&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Invoice_Data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="636,1892" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:BuildDataTable DataTable="[InvoiceComparison_DataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="636,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Number&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Model_x0020__x0028_Invoice_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Model_x0020__x0028_Chrono24_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Price_x0020__x0028_Invoice_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Price_x0020__x0028_Chrono24_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Difference&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This iterates through every model extracted from past invoices." DataTable="[Invoice_Data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="636,2280" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="invoiceitem" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="602,1777" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="602,2134" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Double" Name="Highest_Probability" />
             </Sequence.Variables>
@@ -126,31 +127,39 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="560,60" sap2010:WorkflowViewState.IdRef="Assign_1">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Double">[Highest_Probability]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:Double">0</InArgument>
-              </Assign.Value>
-            </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="560,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[Closest_Model]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" Value="" />
-                </InArgument>
-              </Assign.Value>
-            </Assign>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Market_Data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,1056" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <Sequence sap2010:Annotation.AnnotationText="This resets temporal variables." DisplayName="Set-Up Sequence" sap:VirtualizedContainerService.HintSize="560,283" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Double">[Highest_Probability]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Double">0</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[Closest_Model]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This iterates through every model in the data scraped from Chrono24." DataTable="[Market_Data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,1250" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="marketitem" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,941" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,1104" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Double" Name="Similarity_Percentage" />
                     </Sequence.Variables>
@@ -159,8 +168,19 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <isa:DamerauLevenshtein ContinueOnError="False" DisplayName="Damerau Levenshtein" FirstString="[invoiceitem(0).ToString]" sap:VirtualizedContainerService.HintSize="484,170" sap2010:WorkflowViewState.IdRef="DamerauLevenshtein_1" IgnoreCase="True" SecondString="[marketitem(0).ToString]" SimilarityPercentage="[Similarity_Percentage]" StringLengthOverride="False" />
-                    <If Condition="[Similarity_Percentage &gt; Highest_Probability]" sap:VirtualizedContainerService.HintSize="484,639" sap2010:WorkflowViewState.IdRef="If_1">
+                    <isa:DamerauLevenshtein sap2010:Annotation.AnnotationText="This is a string comparison activity and is implemented in the case that a model in the invoice is named differently then in our web-scraped data. It will return a similarity percentage, by comparing the similarity of the name of the model in an invoice with every model scraped from the web, we can find the closest model that matches the model in the invoice, subsequently comparing the prices between the invoice and the market." ContinueOnError="False" DisplayName="Damerau Levenshtein" FirstString="[invoiceitem(0).ToString]" sap:VirtualizedContainerService.HintSize="484,302" sap2010:WorkflowViewState.IdRef="DamerauLevenshtein_1" IgnoreCase="True" SecondString="[marketitem(0).ToString]" SimilarityPercentage="[Similarity_Percentage]" StringLengthOverride="False">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </isa:DamerauLevenshtein>
+                    <If sap2010:Annotation.AnnotationText="This looks for the model with the highest match." Condition="[Similarity_Percentage &gt; Highest_Probability]" sap:VirtualizedContainerService.HintSize="484,670" sap2010:WorkflowViewState.IdRef="If_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
                         <Sequence sap:VirtualizedContainerService.HintSize="304,452" sap2010:WorkflowViewState.IdRef="Sequence_4">
                           <sap:WorkflowViewStateService.ViewState>
@@ -197,7 +217,7 @@
                               <OutArgument x:TypeArguments="x:String">[Price_Difference]</OutArgument>
                             </Assign.To>
                             <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">[(CInt(invoiceitem(1).ToString) - CInt(Market_Price)).ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:String">[(CInt(Market_Price) - CInt(invoiceitem(1).ToString)).ToString]</InArgument>
                             </Assign.Value>
                           </Assign>
                         </Sequence>
@@ -215,14 +235,37 @@
                   </Sequence>
                 </ActivityAction>
               </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:ForEachRow>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="560,62" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[Closest_Model]" />
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="560,62" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Percentage: &quot; + Highest_Probability.ToString]" />
-            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{invoiceitem(2).ToString,Closest_Model,invoiceitem(1).ToString,Market_Price,Price_Difference}]" DataTable="[InvoiceComparison_DataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="560,185" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="560,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Closest Match: &quot; + Closest_Model]" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="560,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Similarity Percentage: &quot; + Highest_Probability.ToString]" />
+            <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="This combines all data into a data row and adds it into a Data Table." ArrayRow="[{invoiceitem(2).ToString,invoiceitem(0).ToString,Closest_Model,invoiceitem(1).ToString,Market_Price,Price_Difference}]" DataTable="[InvoiceComparison_DataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="560,227" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:AddDataRow>
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:WriteCsvFile AddHeaders="True" DataTable="[InvoiceComparison_DataTable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Comparisons\Invoice Price Comparison.csv" sap:VirtualizedContainerService.HintSize="636,153" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True" />
+    <ui:WriteCsvFile AddHeaders="True" sap2010:Annotation.AnnotationText="This writes the Data Table into a CSV file." DataTable="[InvoiceComparison_DataTable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Comparisons\Invoice Price Comparison.csv" sap:VirtualizedContainerService.HintSize="636,184" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:WriteCsvFile>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="636,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="INVOICE COMPARISON SEQUENCE COMPLETE" />
   </Sequence>
 </Activity>

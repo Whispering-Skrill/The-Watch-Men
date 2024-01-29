@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2449,2426</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2546,2777</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Inventory_Comparison_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
@@ -87,7 +87,7 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Inventory_Comparison" sap:VirtualizedContainerService.HintSize="751,2361" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Inventory_Comparison" sap:VirtualizedContainerService.HintSize="751,2712" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Actions" />
       <Variable x:TypeArguments="sd:DataTable" Name="InventoryComparison_DataTable" />
@@ -98,33 +98,38 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:BuildDataTable DataTable="[InventoryComparison_DataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="709,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Lot_x0020_no.&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Model&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Inventory_x0020_Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Market_x0020_Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Actions&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Inventory_Data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="709,1977" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This iterates through every Model within the Inventory Catalog." DataTable="[Inventory_Data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="709,2196" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="inventorymodel" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="675,1862" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="675,2050" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Market_Data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="633,1770" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This iterates through every Model with Market Data Details." DataTable="[Market_Data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="633,1958" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="marketmodel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="599,1655" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="599,1812" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[inventorymodel(0).ToString.Contains(marketmodel(0).ToString)]" sap:VirtualizedContainerService.HintSize="557,1563" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If sap2010:Annotation.AnnotationText="This checks if the Current Inventory Model matches the Current Market Details." Condition="[inventorymodel(0).ToString.Contains(marketmodel(0).ToString)]" sap:VirtualizedContainerService.HintSize="557,1720" sap2010:WorkflowViewState.IdRef="If_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="521,1376" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence sap:VirtualizedContainerService.HintSize="521,1502" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="CurrentModel_String" />
                             <Variable x:TypeArguments="x:String" Name="CurrentInvPrice_String" />
@@ -136,7 +141,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,208" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                          <ui:MultipleAssign sap2010:Annotation.AnnotationText="This assigns multiple values such as the inventory lot number, model and market price to several variables." DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,250" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                             <ui:MultipleAssign.AssignOperations>
                               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -173,8 +178,13 @@
                                 </ui:AssignOperation>
                               </scg:List>
                             </ui:MultipleAssign.AssignOperations>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
                           </ui:MultipleAssign>
-                          <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="479,811" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                          <ui:IfElseIf sap2010:Annotation.AnnotationText="This Else If activity compares the inventory price and the market price and suggests actions." DisplayName="Else If" sap:VirtualizedContainerService.HintSize="479,853" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
                             <ui:IfElseIf.ConditionBlocks>
                               <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                 <ui:IfElseIfBlock BlockType="If" Condition="[Integer.Parse(CurrentInvPrice_String) &gt; Integer.Parse(marketmodel(1).ToString)]">
@@ -236,8 +246,19 @@
                                 </ui:IfElseIfBlock>
                               </sc:BindingList>
                             </ui:IfElseIf.ConditionBlocks>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
                           </ui:IfElseIf>
-                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CurrentLotNum_String,CurrentModel_String,CurrentInvPrice_String,CurrentMarPrice_String,Actions}]" DataTable="[InventoryComparison_DataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="479,185" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                          <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="This combines the details and actions into a data row and adds it into the Comparison Data Table." ArrayRow="[{CurrentLotNum_String,CurrentModel_String,CurrentInvPrice_String,CurrentMarPrice_String,Actions}]" DataTable="[InventoryComparison_DataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="479,227" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:AddDataRow>
                         </Sequence>
                       </If.Then>
                       <If.Else>
@@ -253,11 +274,28 @@
                   </Sequence>
                 </ActivityAction>
               </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:ForEachRow>
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:WriteCsvFile AddHeaders="True" DataTable="[InventoryComparison_DataTable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Comparisons\Inventory Price Comparison.csv" sap:VirtualizedContainerService.HintSize="709,153" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True" />
+    <ui:WriteCsvFile AddHeaders="True" sap2010:Annotation.AnnotationText="The Inventory Comparison Data Table is then written into a CSV." DataTable="[InventoryComparison_DataTable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Comparisons\Inventory Price Comparison.csv" sap:VirtualizedContainerService.HintSize="709,184" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:WriteCsvFile>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="709,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="INVENTORY COMPARISON SEQUENCE COMPLETE" />
   </Sequence>
 </Activity>
