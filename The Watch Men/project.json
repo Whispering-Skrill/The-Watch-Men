@@ -3,6 +3,7 @@
   "description": "Market Data Scraping RPA Process for The Watch Men Company.",
   "main": "Main.xaml",
   "dependencies": {
+    "InternalLabs.StringAlgorithms.Activities": "[2.0.0]",
     "UiPath.DocumentUnderstanding.ML.Activities": "[1.24.0]",
     "UiPath.Excel.Activities": "[2.22.3]",
     "UiPath.IntelligentOCR.Activities": "[6.14.1]",
